@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalaiselvi trades</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!----Navbar-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">KALAISELVI TRADES</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#product">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+            <button class="btn p-2 my-lg-0 my-2">Sign In</button>
+            <img id="cart" src="image/cart.png" alt="" height="20px" width="30px"/>
+            <span class="quantity">0</span>
+
+            <div class="cart2 ">
+              <div class="cart-title">Cart Items</div>
+              <div class="cart-content">
+                
+               <!--
+                <div class="cart-box">
+                  <img src="image/goldwinner.png" class="cart-image"/>
+                  <div class="detail-box">
+                    <div class="cart-food-title">goldwinner</div>
+                    <div class="price-box">
+                      <div class="cart-price">130$</div>
+                      <div class="cart-amt">130$</div>
+                    </div>
+                    <input type="number" value="1" class="cart-quantity"/>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill cart-remove" viewBox="0 0 16 16">
+                    <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+                  </svg>
+                </div>
+                
+    
+                <div class="cart-box">
+                  <img src="image/goldwinner.png" class="cart-image"/>
+                  <div class="detail-box">
+                    <div class="cart-food-title">goldwinner</div>
+                    <div class="price-box">
+                      <div class="cart-price">130$</div>
+                      <div class="cart-amt">130$</div>
+                    </div>
+                    <input type="number" value="1" class="cart-quantity">
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill cart-remove"  viewBox="0 0 16 16">
+                    <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+                  </svg>
+                </div>
+
+                -->
+             </div> 
+           
+             <div class="total">
+              <div class="total-title">Total</div>
+              <div class="total-price">Rs.0</div>
+            </div>
+    
+            <button type="button" class="btn-buy">place order</button>
+    
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill cart-close" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+            </svg>
+    
+            </div>
+          </div>
+          
+          
+        </div>
+      </nav>
+
+
+      <!----Home-->
+
+      <section id="home">
+          <h1 class="text-center">KALAISELVI TRADES</h1>
+          <p>All Kinds of Agmark Oil Avaliable Here </p>
+          <div class="input-group m-4">
+              <input type="text" class="form-control" placeholder="Email Address">
+            <button class="btn signin">Get Started</button>
+          </div>
+      </section>
+
+
+      <!-----About---->
+
+      <section id="about">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-lg-6 col-md-6 col-12 my-2">
+                        <!--<img src="about.png" class="img-fluid"/>-->
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-12 p-lg-5 p-2 my-5">
+                      <h1>ABOUT US</h1>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam obcaecati amet repudiandae, temporibus commodi provident. Optio soluta neque voluptate! Voluptas rerum velit optio id. Laborum ut architecto quidem deserunt non?Laboriosam obcaecati amet repudiandae, temporibus commodi provident. Optio soluta neque voluptate! Voluptas rerum velit optio id. Laborum ut architecto quidem deserunt non?Laboriosam obcaecati amet repudiandae, temporibus commodi provident. Optio soluta neque voluptate! Voluptas rerum velit optio id. Laborum ut architecto quidem deserunt non?Laboriosam obcaecati amet repudiandae, temporibus commodi provident. Optio soluta neque voluptate! Voluptas rerum velit optio id. Laborum ut architecto quidem deserunt non?</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+        <!--products-->  
+        <section id="product">
+        <div class="container m-5">
+          <h1 class="text-center my-5"> PRODUCTS</h1>
+          <h2 class="text-center">Sunflower oils</h2>
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                  <img src="image/goldwinner.png" class="oil-img" />
+                  <h5 class="card-title oil-title">gold winner 1Liter</h5>
+                  <p class="oil-price">Rs.130</p>
+                  <button class="btn signin add-cart">Add cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/sundewoil.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">sundew 1Liter</h5>
+                  <p class="oil-price">Rs.110</p>
+                  <button class="btn signin add-cart">Add cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+              <div class="card-body text-center">
+                <img src="image/svssunoi.png"class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">SVS sunfloweroil 1Liter</h5>
+                  <p class="oil-price">Rs.130</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+              </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+              <div class="card-body text-center">
+                <img src="image/fortunesunoil.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Fortune 1Liter</h5>
+                  <P class="oil-price">Rs.140</P>
+                  <button class="btn signin add-cart">Add Cart</button>
+              </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+              <div class="card-body text-center">
+                <img src="image/svssunoil15kg.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">SVS sunfloweroil 15Liter</h5>
+                  <p class="oil-price">Rs.2000</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+              </div>
+              </div>
+            </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <div class="card-body text-center">
+                <img src="image/sunlandoil5kg.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Sunland 5Liter</h5>
+                  <p class="oil-price">Rs.600</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+              </div>
+            </div>
+          </div>
+           <div class="col-lg-4 col-md-4 col-12">
+             <div class="card">
+              <div class="card-body text-center">
+                <img src="image/goldwinner15kg.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Gold Winner 15Liter</h5>
+                  <p class="oil-price">Rs.2000</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/gd100ml.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Gold winner 100ml(10 Packet)</h5>
+                  <p class="oil-price">Rs.140</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/goldwinner5kg.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Gold Winner 5Liter</h5>
+                  <p class="oil-price">Rs.630</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/goldwinnwer 500ml.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Gold Winner 500ml</h5>
+                  <p class="oil-price">Rs.75</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/gd 200ml.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Gold Winner 200ml(5 Packet)</h5>
+                  <p class="oil-price">Rs.140</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/sundew 500ml.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Sundew 500ml</h5>
+                  <p class="oil-price">Rs.55</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/sundew 1lbt.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Sundew 1Liter</h5>
+                  <p class="oil-price">Rs.110</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/sundew 500ml.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Sundew 100ml(10 Packet)</h5>
+                  <p class="oil-price">Rs.110</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/sundew 500ml.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Sundew 50ml(10 packet)</h5>
+                  <p class="oil-price">Rs.55</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="text-center">Palm oils</h2>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/SOR 1liter.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">SOR 1liter</h5>
+                  <p class="oil-price">Rs.95</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/robini1l.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Roobini 1Liter</h5>
+                  <p class="oil-price">Rs.97</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/Paalmsuper 1liter.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Paalm super 1Liter </h5>
+                  <p class="oil-price">Rs.93</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/sor 500ml.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">SOR 500ml</h5>
+                  <p class="oil-price">Rs.43</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/robini500ml.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Roobini 500ml </h5>
+                  <p class="oil-price">Rs.54</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/palm super 500ml.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Paalm super 500ml</h5>
+                  <p class="oil-price">Rs.40</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/robini 10 rs 1.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Roobini 10Rs(20 packet)</h5>
+                  <p class="oil-price">Rs.167</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/celevr 100ml.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Clever 100ml(10 packet)</h5>
+                  <p class="oil-price">Rs.100</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/celevr 100ml.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Clever 200ml(5 packet)</h5>
+                  <p class="oil-price">Rs.100</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-center">Groundnut oils</h2>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/cardia gdoil1.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Cardia GD 1Liter</h5>
+                  <p class="oil-price">Rs.190</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/ktv bottle.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">KTV 1Liter Bottle</h5>
+                  <p class="oil-price">Rs.200</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/mr.goldgdoil 1.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Mr.Gold 1Liter</h5>
+                  <p class="oil-price">Rs.190</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/svsgdoil1.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">SVS 1Liter</h5>
+                  <p class="oil-price">Rs.190</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="text-center">Gingelly oils</h2>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/idyam 1lt.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Idhayam 1Liter</h5>
+                  <p class="oil-price">Rs.400</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/idyam 500ml.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Idhayam 500ml</h5>
+                  <p class="oil-price">Rs.200</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                <img src="image/idyam 50ml.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Idhayam 50ml(10 packet)</h5>
+                  <p class="oil-price">Rs.200</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <div class="card-body text-center">
+                 <img src="image/cardia ggoil1.png" class="card-img-top oil-img"/>
+                  <h5 class="card-title oil-title">Cardia GG 1Liter</h5>
+                  <p class="oil-price">Rs.390</p>
+                  <button class="btn signin add-cart">Add Cart</button>
+                </div>
+              </div>
+            </div>
+            
+          
+
+
+            
+            
+          
+          </div>
+        </div>
+        </section>
+
+      <!-- contact us -->
+      <section id="contact">
+            <div class="container box my-5">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                       <!-- <img src="contact.jpg" class="img-fluid">-->
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15542.825208449522!2d80.262117!3d13.117783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52659a5caa3631%3A0x94bc9bf570a9a60e!2sKalaiselvi%20Traders!5e0!3m2!1sen!2sin!4v1683628786361!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <h1>CONTACT US</h1>
+                        <form class="mb-3">
+                            <input type="text" class="form-control" placeholder="Enter your name">
+                            <input type="email" class="form-control" placeholder="Enter your mail">
+                            <textarea class="form-control" placeholder="Enter your message"></textarea>
+                            <button class="btn signin">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+      </section>
+    
+      <footer>Copyrights @kalaiselvi trades 2023</footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
